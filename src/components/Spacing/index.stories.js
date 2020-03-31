@@ -12,21 +12,24 @@ const StyledTomatoBox = styled.div`
   width: 100px;
   height: 100px;
   border: 1px solid tomato;
+  color: tomato;
+  font-size: 12px;
+  font-weight: bold;
 `
 
 export const Default = () => (
   <>
     <Spacing bottom={20}>
-      <StyledTomatoBox>1</StyledTomatoBox>
+      <StyledTomatoBox>bottom 20</StyledTomatoBox>
     </Spacing>
-    <Spacing>
-      <StyledTomatoBox>1</StyledTomatoBox>
+    <Spacing left={12}>
+      <StyledTomatoBox>left 12</StyledTomatoBox>
     </Spacing>
-    <Spacing>
-      <StyledTomatoBox>1</StyledTomatoBox>
+    <Spacing top={12} left={32}>
+      <StyledTomatoBox>top 12, left 32</StyledTomatoBox>
     </Spacing>
-    <Spacing>
-      <StyledTomatoBox>1</StyledTomatoBox>
+    <Spacing right={12} top={20}>
+      <StyledTomatoBox>right 12, top 20</StyledTomatoBox>
     </Spacing>
   </>
 )
