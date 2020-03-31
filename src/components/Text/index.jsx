@@ -5,26 +5,26 @@ import Theme from '../../Theme'
 
 const defaultText = ({ theme }) => css`
   color: ${theme.color.default};
-  font-size: ${theme.size.md};
+  font-size: ${theme.size.md}px;
   line-height: ${theme.lineHeight.md};
   font-weight: ${theme.fontWeight.normal};
 `
 
 const xsmall = ({ theme }) => css`
   font-size: ${theme.size.xs}px;
-  line-height: ${theme.lineHeight.xs}px;
+  line-height: ${theme.lineHeight.xs};
 `
 const small = ({ size, lineHeight }) => css`
   font-size: ${size.sm}px;
-  line-height: ${lineHeight.sm}px;
+  line-height: ${lineHeight.sm};
 `
 const large = ({ size, lineHeight }) => css`
   font-size: ${size.lg}px;
-  line-height: ${lineHeight.lg}px;
+  line-height: ${lineHeight.lg};
 `
 const xlarge = ({ size, lineHeight }) => css`
   font-size: ${size.xg}px;
-  line-height: ${lineHeight.xg}px;
+  line-height: ${lineHeight.xg};
 `
 const secondary = ({ color }) =>
   css`

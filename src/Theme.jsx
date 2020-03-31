@@ -4,15 +4,24 @@ import { ThemeProvider } from 'styled-components'
 const theme = {
   // 색상
   color: {
-    primary: '#00b894', // 주 색상
-    secondary: '#6c5ce7', // 부 색상
+    primary: '#2196F3', // 주 색상
+    primaryDark: '#1976D2',
+    secondary: '#009688', // 부 색상
+    secondaryDark: '#00796b',
     white: '#FFFFFF',
-    gray: '#CCCCCC',
-    default: '#2d3436', // 기본 문자 색상
-    error: '#d63031', // 오류 색상
+    gray: '#9e9e9e',
+    grayLight: '#eeeeee',
+    grayDark: '#616161',
+    border: 'rgba(0, 0, 0, .15)',
+    default: '#333333', // 기본 문자 색상
+    error: '#e51c23', // 오류 색상
   },
+
   // 폰트 사이즈
   size: {
+    h1: 48,
+    h2: 36,
+    h3: 28,
     xg: 24,
     lg: 18,
     md: 14,
@@ -20,12 +29,13 @@ const theme = {
     xs: 10,
   },
   lineHeight: {
-    xg: '60px',
-    lg: '54px',
-    md: '36px',
-    sm: '24px',
-    xs: '18px',
+    xg: 1.6,
+    lg: 1.6,
+    md: 1.5,
+    sm: 1.4,
+    xs: 1.4,
   },
+
   fontWeight: {
     bold: 'bold',
     normal: 'normal',
