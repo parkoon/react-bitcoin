@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Airbnb 및 실리콘밸리에서 개발하는 노하우 배우기
 
-## Available Scripts
+## Currying & HOC
 
-In the project directory, you can run:
+중복 코드를 제거하기 위해 Currying 과 HOC 개념을 자주 사용한다.
 
-### `yarn start`
+## 배열 함수
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Context API & Redux
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Modal, Form 과 같이 하나의 단위(?) 컴포넌트에서는 Context API를 주로 사용하고 비동기 통신에 의한 데이터 처리 및 관리는 Redux Store를 이용한다.
 
-### `yarn test`
+## CSS in Javascript 기법을 이용한다.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+css 관리하기도 힘들고, 인수인계 할 때에도 js, css를 인수인계 해야하니 보통 까다로운 일이 아니다. 또한, 중복 안되는 클래스명을 생각하는 것도 쉬운 작업이 아니다.
 
-### `yarn build`
+## 테마를 지정한다
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+디자인 가이드를 보고, `color`, `size`, `font-weight` 와 같은 속성들을 미리 지정해 놓는다.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+> [Material Ui Theme Object](*https://material-ui.com/customization/default-theme/*) 를 참고하면 테마를 구성하는 도움을 받을 수 있다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 컴포넌트 작은 단위부터 개발한다
 
-### `yarn eject`
+Atomic 디자인 관점으로 봤을 때 Atom 을 우선적으로 개발한다.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+해당 프로젝트에서 구현할 컴포넌트는 아래와 같다.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Button
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Card
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Form
 
-## Learn More
+  - FormItem
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Heading
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- InlineList
 
-### Code Splitting
+- Input
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- Option
 
-### Analyzing the Bundle Size
+- Select
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Spacing
 
-### Making a Progressive Web App
+- Table
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+  - TableBody
+  - TableCell
+  - TableHead
+  - TableRow
 
-### Advanced Configuration
+- Text
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+- Toast
 
-### Deployment
+## 스토리북을 이용한다.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+스토리북을 이용해 컴포넌트를 테스트 할 수 있으며, props에 따른 컴포넌트 변화를 바로 확인 할 수 있다.
