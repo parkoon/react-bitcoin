@@ -1,7 +1,7 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
-const theme = {
+export const theme = {
   // 색상
   color: {
     primary: '#2196F3', // 주 색상
