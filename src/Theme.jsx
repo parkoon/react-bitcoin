@@ -4,10 +4,10 @@ import { ThemeProvider } from 'styled-components'
 export const theme = {
   // 색상
   color: {
-    primary: '#2196F3', // 주 색상
-    primaryDark: '#1976D2',
-    secondary: '#009688', // 부 색상
-    secondaryDark: '#00796b',
+    primary: '#55efc4', // 주 색상
+    primaryDark: '#00b894',
+    secondary: '#81ecec', // 부 색상
+    secondaryDark: '#00cec9',
     white: '#FFFFFF',
     gray: '#9e9e9e',
     grayLight: '#eeeeee',
