@@ -8,7 +8,8 @@ const StyledSelectWrapper = styled.div`
   position: relative;
   background: ${theme.color.white};
   max-width: 300px;
-  outline-color: ${theme.color.primaryDark};
+  outline: none;
+  /* outline-color: ${theme.color.primaryDark}; */
 `
 
 const StyledSelectedArea = styled.div`
@@ -32,21 +33,25 @@ function SelectedArea({ children, ...props }) {
   return <StyledSelectedArea {...props}>{children}</StyledSelectedArea>
 }
 
-function Select({ children }) {
+function Select({ children, onChange }) {
   const [value, setValue] = useState('선택하세요.')
   const [open, setOpen] = useState(false)
 
   const toggleDropdown = () => {
     setOpen(!open)
   }
-  const handleSelect = value => {
-    console.log(value)
+  const handleSelect = (name, value) => {
     setValue(value)
+    setOpen(false)
+    onChange(name, value)
+  }
+
+  const handleBlur = () => {
     setOpen(false)
   }
 
   return (
-    <StyledSelectWrapper>
+    <StyledSelectWrapper tabIndex={0} onBlur={handleBlur}>
       <SelectedArea onClick={toggleDropdown}>{value}</SelectedArea>
       {open && <DropDown onSelect={handleSelect}>{children}</DropDown>}
     </StyledSelectWrapper>

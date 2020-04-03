@@ -26,9 +26,11 @@ const StyledList = styled.ul`
 `
 export function DropDown({ children, onSelect }) {
   const handleSelect = ({ target }) => {
-    const value = target.textContent || target.innerText || ''
-    onSelect(value)
+    const value = target.getAttribute('value') || ''
+    const name = target.textContent || target.innerText || ''
+    onSelect(name, value)
   }
+
   return (
     <StyledDropDownWrapper>
       <StyledList>

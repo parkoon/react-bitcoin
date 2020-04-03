@@ -8,13 +8,18 @@ export default {
   component: Select,
 }
 
-export const Default = () => (
-  <>
-    <Select>
-      <Option>A</Option>
-      <Option>B</Option>
-      <Option>C</Option>
-      <Option>D</Option>
-    </Select>
-  </>
-)
+export const Default = () => {
+  const handleChange = (name, value) => {
+    console.log(name, value)
+  }
+  return (
+    <>
+      <Select onChange={handleChange}>
+        <Option value="A">A</Option>
+        <Option value="B">B</Option>
+        <Option value="C">C</Option>
+        <Option value="D">D</Option>
+      </Select>
+    </>
+  )
+}
