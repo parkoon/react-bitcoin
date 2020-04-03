@@ -12,6 +12,7 @@ function Form({ children, onSubmit }) {
 
   const handleSubmit = e => {
     e.preventDefault()
+    if (checkError()) return
     onSubmit(values)
   }
 
@@ -21,6 +22,11 @@ function Form({ children, onSubmit }) {
       ...values,
       [name]: value,
     })
+  }
+
+  const checkError = () => {
+    const result = Object.keys(errors).filter(field => errors[field])
+    return result.length ? true : false
   }
 
   const handleError = (rules, name, value) => {
@@ -49,7 +55,6 @@ function Form({ children, onSubmit }) {
     }
     if (lengthRule) {
       const { len, message } = lengthRule
-      console.log('length rule!')
       const isValid = value.length < len
       if (!isValid) {
         setErrors({ ...errors, [name]: message })
@@ -72,7 +77,7 @@ function Form({ children, onSubmit }) {
     <form onSubmit={handleSubmit}>
       {React.Children.map(children, child => {
         const { name, rules } = child.props
-        return React.cloneElement(child, { handleChange, name, rules, handleError })
+        return React.cloneElement(child, { handleChange, name, rules, handleError, errors })
       })}
     </form>
   )
