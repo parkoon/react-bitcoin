@@ -4,8 +4,6 @@ import Theme from '../../Theme'
 
 const StyledSpacing = styled.div`
   ${props => {
-    console.log(props.bottom, props.theme.unit, props.bottom * props.theme.unit)
-
     return css`
       margin-top: ${props.top * props.theme.unit}px;
       margin-right: ${props.right * props.theme.unit}px;

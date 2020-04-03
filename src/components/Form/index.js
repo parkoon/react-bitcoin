@@ -6,10 +6,6 @@ function Form({ children, onSubmit }) {
   const [values, setValues] = useState({})
   const [errors, setErrors] = useState({})
 
-  useEffect(() => {
-    console.log('errors', errors)
-  }, [errors])
-
   const handleSubmit = e => {
     e.preventDefault()
     if (checkError()) return

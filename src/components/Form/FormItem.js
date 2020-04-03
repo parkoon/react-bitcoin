@@ -38,7 +38,6 @@ function FormItem({
   handleError = () => {},
   label,
 }) {
-  console.log('errors', errors)
   const handleBlur = ({ target }) => {
     const { value } = target
     rules && handleError(rules, name, value)

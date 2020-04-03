@@ -19,7 +19,6 @@ const StyledTd = styled.td`
 
 function TableCell({ children, ...props }) {
   const { isHeader } = props
-  console.log(props)
   return (
     <>
       {isHeader ? (
