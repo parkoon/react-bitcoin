@@ -12,7 +12,7 @@ const AppLayoutBody = styled.div`
   padding: ${unit * 6}px;
 `
 
-function AppLayout(children) {
+function AppLayout({ children }) {
   return (
     <AppLayoutWrapper>
       <AppNav />
