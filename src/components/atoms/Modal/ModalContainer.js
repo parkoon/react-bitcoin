@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import ModalContext from './context'
 import styled from 'styled-components'
-import { theme } from '../../Theme'
+import { theme } from '../../../Theme'
 
 const StyledModalOverlay = styled.div`
   display: flex;

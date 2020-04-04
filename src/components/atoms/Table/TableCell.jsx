@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { theme } from '../../Theme'
+import { theme } from '../../../Theme'
 
 const commonStyles = css`
   padding: ${`${theme.unit * 2}px ${theme.unit * 4}px`};
@@ -14,7 +14,7 @@ const StyledTh = styled.th`
 `
 const StyledTd = styled.td`
   ${commonStyles};
-  border-bottom: ${props => props.baseline && `1px solid ${theme.color.border}`};
+  border-bottom: ${(props) => props.baseline && `1px solid ${theme.color.border}`};
 `
 
 function TableCell({ children, ...props }) {

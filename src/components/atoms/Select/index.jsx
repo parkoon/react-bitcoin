@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Option from './Option'
 import DropDown from './DropDown'
-import { theme } from '../../Theme'
+import { theme } from '../../../Theme'
 import { useEffect } from 'react'
 const StyledSelectWrapper = styled.div`
   position: relative;
