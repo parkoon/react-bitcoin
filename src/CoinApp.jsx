@@ -1,9 +1,14 @@
 import React from 'react'
 import AppBar from './components/molecules/AppBar'
 import AppLayout from './components/oragnisms/AppLayout'
+import CoinOverview from './components/oragnisms/CoinOverview'
 
 function CoinApp() {
-  return <AppLayout>본문</AppLayout>
+  return (
+    <AppLayout>
+      <CoinOverview />
+    </AppLayout>
+  )
 }
 
 export default CoinApp
