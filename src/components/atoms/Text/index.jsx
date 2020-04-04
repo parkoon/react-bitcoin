@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import Theme from '../../Theme'
+import Theme from '../../../Theme'
 
 const defaultText = ({ theme }) => css`
   color: ${theme.color.default};

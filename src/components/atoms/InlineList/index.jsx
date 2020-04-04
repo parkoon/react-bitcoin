@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import Theme from '../../Theme'
+import Theme from '../../../Theme'
 
 const JUSTIFY_CONTENT_MAP = {
   left: 'flex-start',

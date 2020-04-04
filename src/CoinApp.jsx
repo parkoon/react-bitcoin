@@ -1,7 +1,7 @@
 import React from 'react'
 
-function App() {
+function CoinApp() {
   return <div>Hi there</div>
 }
 
-export default App
+export default CoinApp

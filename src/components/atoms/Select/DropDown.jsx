@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Option from './Option'
-import { theme } from '../../Theme'
+import { theme } from '../../../Theme'
 
 const StyledDropDownWrapper = styled.div`
   padding: 0;
