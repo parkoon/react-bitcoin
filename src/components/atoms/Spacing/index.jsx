@@ -3,14 +3,15 @@ import styled, { css } from 'styled-components'
 import Theme from '../../../Theme'
 
 const StyledSpacing = styled.div`
-  ${props => {
+  display: ${(props) => (props.inline ? 'inline-block' : 'block')};
+  ${(props) => {
     return css`
       margin-top: ${props.top * props.theme.unit}px;
       margin-right: ${props.right * props.theme.unit}px;
       margin-left: ${props.left * props.theme.unit}px;
       margin-bottom: ${props.bottom * props.theme.unit}px;
     `
-  }}
+  }};
 `
 
 function Spacing({ children, ...props }) {
