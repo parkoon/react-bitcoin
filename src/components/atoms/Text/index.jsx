@@ -42,12 +42,12 @@ const light = ({ fontWeight }) =>
   css`
     font-weight: ${fontWeight.light};
   `
-const inverse = ({ theme }) => `color: #fff`
+const inverse = ({ theme }) => `color: #fff;`
 
 const StyledText = styled.span`
   ${defaultText}
 
-  ${props => {
+  ${(props) => {
     const styles = []
     const theme = props.theme
 
