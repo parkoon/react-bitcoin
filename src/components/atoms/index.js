@@ -9,15 +9,4 @@ import Table from './Table'
 import Text from './Text'
 import Toast from './Toast'
 
-export default {
-  Card,
-  From,
-  Heading,
-  Modal,
-  InlineList,
-  Select,
-  Spacing,
-  Table,
-  Text,
-  Toast,
-}
+export { Card, From, Heading, Modal, InlineList, Select, Spacing, Table, Text, Toast }
